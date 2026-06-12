@@ -20,4 +20,5 @@ OFFSET $2;
 -- name: UpdateAccount :exec
 UPDATE account
 SET currency = $2
-WHERE id = $1;
+WHERE id = $1
+RETURNING *;

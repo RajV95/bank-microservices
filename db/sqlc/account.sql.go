@@ -101,6 +101,7 @@ const updateAccount = `-- name: UpdateAccount :exec
 UPDATE account
 SET currency = $2
 WHERE id = $1
+RETURNING id, owner, balance, currency, created_at
 `
 
 type UpdateAccountParams struct {
